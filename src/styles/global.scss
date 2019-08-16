@@ -1,0 +1,6 @@
+@import 'modules/all';
+
+:global {
+    @import 'vendor/all';
+    @import 'partials/all';
+}
