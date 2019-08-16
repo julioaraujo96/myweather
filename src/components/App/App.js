@@ -1,6 +1,6 @@
 import React from "react";
 import { Helmet } from "react-helmet";
-import "./App.scss";
+import "./App.module.scss";
 
 const App = () => (
   <div className="App">
