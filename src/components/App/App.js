@@ -8,7 +8,10 @@ const App = () => (
       <meta charSet="utf-8" />
       <title>My Weather</title>
     </Helmet>
-    <h1>Hello World</h1>
+
+    {/* <Titles /> */}
+    {/* <Search /> */}
+    {/* <Weather /> */}
   </div>
 );
 
