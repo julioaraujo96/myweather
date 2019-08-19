@@ -1,13 +1,17 @@
 import React, { Component } from "react";
 import { Helmet } from "react-helmet";
-import "./App.module.scss";
+import styles from "./App.module.scss";
+import Search from "../Search/Search";
 
 const API_KEY = process.env.REACT_APP_API_KEY;
 
 class App extends Component {
-  getWeather = async () => {
+  getWeather = async e => {
+    e.preventDefault();
+    const city = e.target.elements.city.value;
+    const country = e.target.elements.country.value;
     const response = await fetch(
-      `http://openweathermap.org/data/2.5/forecast?q=London,us&appid=${API_KEY}`
+      `http://openweathermap.org/data/2.5/forecast?q=${city},${country}&appid=${API_KEY}`
     );
     const data = await response.json();
     console.log(data);
@@ -22,7 +26,7 @@ class App extends Component {
         </Helmet>
 
         {/* <Header /> */}
-        {/* <Search /> */}
+        <Search getWeather={this.getWeather} />
         {/* <Weather /> */}
       </div>
     );
