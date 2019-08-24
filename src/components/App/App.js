@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import { Helmet } from 'react-helmet';
 import styles from './App.module.scss';
 import LocationForm from '../LocationForm/LocationForm';
+import WeatherDisplay from '../WeatherDisplay/WeatherDisplay';
 
 const API_KEY = process.env.REACT_APP_API_KEY;
 const BASE_URL = '//api.openweathermap.org/data/2.5/forecast';
@@ -57,7 +58,7 @@ class App extends Component {
 
         {/* <Header /> */}
         <LocationForm onSubmitLocation={this.handleGetLocation} />
-        {/* <Weather /> */}
+        <WeatherDisplay weatherData={this.state.weather} />
       </div>
     );
   }
