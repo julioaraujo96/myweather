@@ -56,7 +56,6 @@ class App extends Component {
         </Helmet>
 
         {/* <Header /> */}
-        {console.log(this.state.weather)}
         <LocationForm onSubmitLocation={this.handleGetLocation} />
         {/* <Weather /> */}
       </div>
