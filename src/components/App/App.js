@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import { Helmet } from 'react-helmet';
-import styles from './App.module.scss';
+import './App.module.scss';
 import LocationForm from '../LocationForm/LocationForm';
 import WeatherDisplay from '../WeatherDisplay/WeatherDisplay';
 
@@ -58,7 +58,9 @@ class App extends Component {
 
         {/* <Header /> */}
         <LocationForm onSubmitLocation={this.handleGetLocation} />
-        <WeatherDisplay weatherData={this.state.weather} />
+        {this.state.weather && (
+          <WeatherDisplay weatherData={this.state.weather} />
+        )}
       </div>
     );
   }

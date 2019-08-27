@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
 import styles from './LocationForm.module.scss';
-import { throwStatement } from '@babel/types';
 
 class LocationForm extends Component {
   state = {

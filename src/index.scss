@@ -1,0 +1,13 @@
+@import 'src/styles/modules/all';
+
+body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  font-family: $primary-font;
+  width: 100%;
+  height: 100vh;
+  background-color: $primary-color;
+}
