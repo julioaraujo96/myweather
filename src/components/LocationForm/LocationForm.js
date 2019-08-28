@@ -19,7 +19,7 @@ class LocationForm extends Component {
   render() {
     const { city, country } = this.state;
     return (
-      <form onSubmit={this.handleSubmit}>
+      <form onSubmit={this.handleSubmit} className={styles.FormDisplay}>
         <input
           type='text'
           name='city'

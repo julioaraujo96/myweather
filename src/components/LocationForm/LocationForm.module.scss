@@ -1,0 +1,59 @@
+@import 'src/styles/modules/all';
+
+.FormDisplay {
+  display: flex;
+  justify-content: center;
+  margin-top: 15vh;
+  input[type='text'] {
+    padding: 15px 40px 15px 20px;
+    margin-right: 0.5em;
+    width: 300px;
+    color: #525252;
+    text-transform: uppercase;
+    font-size: 16px;
+    font-weight: 100;
+    letter-spacing: 2px;
+    border: none;
+    border-radius: 5px;
+    background: linear-gradient(to right, #ffffff 0%, #464747 #f9f9f9 100%);
+    outline: none;
+  }
+  button {
+    background: $green-color;
+    color: #fff;
+    border: none;
+    position: relative;
+    height: 60px;
+    font-size: 1.6em;
+    padding: 0 2em;
+    cursor: pointer;
+    transition: 800ms ease all;
+    outline: none;
+  }
+  button:hover {
+    background: #fff;
+    color: $green-color;
+  }
+  button:before,
+  button:after {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    height: 2px;
+    width: 0;
+    background: $green-color;
+    transition: 400ms ease all;
+  }
+  button:after {
+    right: inherit;
+    top: inherit;
+    left: 0;
+    bottom: 0;
+  }
+  button:hover:before,
+  button:hover:after {
+    width: 100%;
+    transition: 800ms ease all;
+  }
+}
