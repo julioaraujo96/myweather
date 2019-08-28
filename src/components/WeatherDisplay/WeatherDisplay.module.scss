@@ -6,6 +6,7 @@
   justify-content: space-between;
   margin: 4em auto;
   color: white;
+  text-align: center;
 }
 
 .day {
@@ -15,9 +16,10 @@
   }
   .temp {
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
     p {
-      padding-right: 8px;
+      color: $yellow-color;
+      font-weight: bold;
     }
   }
 }
