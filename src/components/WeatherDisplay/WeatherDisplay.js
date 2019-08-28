@@ -15,6 +15,7 @@ const WeatherDisplay = props => {
     ];
     const getDay = date.getDay();
     const day = days[getDay];
+    const temperature = Math.round(weather.main.temp - 273.15);
     return (
       <div key={getDay} className={styles.day}>
         <h2>{day}</h2>
@@ -22,8 +23,7 @@ const WeatherDisplay = props => {
           <p>{weather.weather[0].description}</p>
         </div>
         <div className={styles.temp}>
-          <p>{weather.main.temp_max}</p>
-          <p> {weather.main.temp_min}</p>
+          <p>{temperature} °C</p>
         </div>
       </div>
     );
