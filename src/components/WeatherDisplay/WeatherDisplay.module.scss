@@ -1,0 +1,23 @@
+@import 'src/styles/modules/all';
+
+.WeatherDisplay {
+  display: flex;
+  width: 60%;
+  justify-content: space-between;
+  margin: 2em auto;
+  color: white;
+}
+
+.day {
+  text-align: center;
+  h2 {
+    color: $green-color;
+  }
+  .temp {
+    display: flex;
+    justify-content: space-between;
+    p {
+      padding-right: 8px;
+    }
+  }
+}

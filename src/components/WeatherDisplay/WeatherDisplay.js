@@ -1,4 +1,5 @@
 import React from 'react';
+import styles from './WeatherDisplay.module.scss';
 
 const WeatherDisplay = props => {
   const forecast = props.weatherData.map(weather => {
@@ -15,20 +16,20 @@ const WeatherDisplay = props => {
     const getDay = date.getDay();
     const day = days[getDay];
     return (
-      <div key={getDay} className='day'>
+      <div key={getDay} className={styles.day}>
         <h2>{day}</h2>
         <div className='icon'>
           <p>{weather.weather[0].description}</p>
         </div>
-        <div className='temp'>
-          <h3>{weather.main.temp_min}</h3>
-          <h3>{weather.main.temp_max}</h3>
+        <div className={styles.temp}>
+          <p>{weather.main.temp_min}</p>
+          <p> {weather.main.temp_max}</p>
         </div>
       </div>
     );
   });
   return (
-    <div className='WeatherDisplay'>
+    <div className={styles.WeatherDisplay}>
       {forecast}
       {console.log(props.weatherData)}
     </div>
