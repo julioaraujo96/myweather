@@ -22,8 +22,8 @@ const WeatherDisplay = props => {
           <p>{weather.weather[0].description}</p>
         </div>
         <div className={styles.temp}>
-          <p>{weather.main.temp_min}</p>
-          <p> {weather.main.temp_max}</p>
+          <p>{weather.main.temp_max}</p>
+          <p> {weather.main.temp_min}</p>
         </div>
       </div>
     );
