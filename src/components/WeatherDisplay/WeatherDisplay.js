@@ -16,11 +16,17 @@ const WeatherDisplay = props => {
     const getDay = date.getDay();
     const day = days[getDay];
     const temperature = Math.round(weather.main.temp - 273.15);
+    const icon = weather.weather[0].icon;
+    const description = weather.weather[0].description;
     return (
       <div key={getDay} className={styles.day}>
         <h2>{day}</h2>
         <div className='icon'>
           <p>{weather.weather[0].description}</p>
+          <img
+            src={`http://openweathermap.org/img/wn/${icon}@2x.png`}
+            alt={description}
+          />
         </div>
         <div className={styles.temp}>
           <p>{temperature} °C</p>
@@ -28,12 +34,7 @@ const WeatherDisplay = props => {
       </div>
     );
   });
-  return (
-    <div className={styles.WeatherDisplay}>
-      {forecast}
-      {console.log(props.weatherData)}
-    </div>
-  );
+  return <div className={styles.WeatherDisplay}>{forecast}</div>;
 };
 
 export default WeatherDisplay;
