@@ -12,13 +12,14 @@
 .day {
   text-align: center;
   h2 {
-    color: $green-color;
+    color: $secondary-color;
+    font-weight: bold;
   }
   .temp {
     display: flex;
     justify-content: center;
     p {
-      color: $yellow-color;
+      color: $temperature-color;
       font-weight: bold;
     }
   }
