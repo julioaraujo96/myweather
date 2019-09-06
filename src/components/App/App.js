@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import { Helmet } from 'react-helmet';
-import './App.module.scss';
+import styles from './App.module.scss';
 import LocationForm from '../LocationForm/LocationForm';
 import WeatherDisplay from '../WeatherDisplay/WeatherDisplay';
 
@@ -9,7 +9,8 @@ const BASE_URL = '//api.openweathermap.org/data/2.5/forecast';
 
 class App extends Component {
   state = {
-    weather: null
+    weather: null,
+    error: false
   };
   getWeather = async (city, country) => {
     const response = await fetch(
@@ -28,10 +29,11 @@ class App extends Component {
     try {
       const weatherData = await this.getWeather(city, country);
       const weather = await this.parseWeatherData(weatherData);
-      this.setState({ weather });
+      this.setState({ weather: weather, error: false });
     } catch ({ response, message }) {
-      console.log(message, response);
-      // Do failure stuff
+      this.setState({
+        error: true
+      });
     }
   };
   parseWeatherData = weatherData =>
@@ -49,13 +51,25 @@ class App extends Component {
       .slice(0, 5);
 
   render() {
+    if (this.state.error) {
+      return (
+        <div className={styles.App}>
+          <Helmet>
+            <meta charSet='utf-8' />
+            <title>My Weather</title>
+          </Helmet>
+          {/* <Header /> */}
+          <LocationForm onSubmitLocation={this.handleGetLocation} />
+          <h3>Something went wrong... Make sure you enter a valid location.</h3>
+        </div>
+      );
+    }
     return (
-      <div className='App'>
+      <div className={styles.App}>
         <Helmet>
           <meta charSet='utf-8' />
           <title>My Weather</title>
         </Helmet>
-
         {/* <Header /> */}
         <LocationForm onSubmitLocation={this.handleGetLocation} />
         {this.state.weather && (
