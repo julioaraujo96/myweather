@@ -1,1 +1,8 @@
 @import 'src/styles/modules/all';
+
+.App {
+  h3 {
+    color: $temperature-color;
+    text-align: center;
+  }
+}
