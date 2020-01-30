@@ -2,6 +2,7 @@
 
 .WeatherDisplay {
   display: flex;
+  flex-direction: row-reverse;
   width: 60%;
   justify-content: space-between;
   margin: 4em auto;
@@ -13,7 +14,6 @@
   padding: 1em;
   text-align: center;
   &:hover {
-    // background-color: white;
     background-color: #6e3dd1;
   }
   h2 {
