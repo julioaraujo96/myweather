@@ -10,7 +10,12 @@
 }
 
 .day {
+  padding: 1em;
   text-align: center;
+  &:hover {
+    // background-color: white;
+    background-color: #6e3dd1;
+  }
   h2 {
     color: $secondary-color;
     font-weight: bold;
@@ -22,5 +27,11 @@
       color: $temperature-color;
       font-weight: bold;
     }
+  }
+}
+
+@media screen and (max-width: 800px) {
+  .WeatherDisplay {
+    flex-direction: column-reverse;
   }
 }

@@ -1,6 +1,8 @@
 @import 'src/styles/modules/all';
 
 .App {
+  display: flex;
+  flex-direction: column;
   h3 {
     color: $temperature-color;
     text-align: center;

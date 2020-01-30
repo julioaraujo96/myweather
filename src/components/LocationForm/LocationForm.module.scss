@@ -57,3 +57,18 @@
     transition: 800ms ease all;
   }
 }
+
+@media screen and (max-width: 800px) {
+  .FormDisplay {
+    flex-direction: column;
+    align-items: center;
+
+    input[type='text'] {
+      margin: 0.5em;
+    }
+
+    .button {
+      margin: 1em;
+    }
+  }
+}

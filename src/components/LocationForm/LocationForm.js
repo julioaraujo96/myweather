@@ -34,7 +34,7 @@ class LocationForm extends Component {
           value={country}
           onChange={this.handleChange}
         />
-        <button>Search</button>
+        <button className={styles.button}>Search</button>
       </form>
     );
   }
