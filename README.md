@@ -1,4 +1,4 @@
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Hosted:https://julioaraujo96.github.io/myweather/
 
 MyWeather uses the api from https://openweathermap.org, which is then filtered and mapped using React.
 
